@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="manifest" href="./manifest.json">
+<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="manifest" href="./manifest.json"><link rel="manifest" href="./manifest.json">
 <meta name="theme-color" content="#00d4ff">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <title>G2 GrandeEngine v2</title>
@@ -36,7 +36,11 @@ const bodies=[];let running=false<script>
   }
 </script>
 </body>
-</html>
+</html><script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js');
+  }
+</script>
 function spawn(){const b=new CANNON.Body({mass:1,shape:new CANNON.Box(new CANNON.Vec3(1,1,1)),position:new CANNON.Vec3(0,10,0)});world.addBody(b);bodies.push(b);log('player spawned')}
 function addBox(){const b=new CANNON.Body({mass:0,shape:new CANNON.Box(new CANNON.Vec3(5,0.5,5)),position:new CANNON.Vec3(0,0,0)});world.addBody(b);bodies.push(b);log('ground added')}
 function run(){running=!running;if(running){loop();log('running')}else log('paused')}
