@@ -1,0 +1,22 @@
+{
+  "name": "G2 GrandeEngine",
+  "short_name": "G2 Engine", 
+  "description": "Game engine from Sangre Grande 🇹🇹",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#00d4ff",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "https://img.icons8.com/fluency/192/game-controller.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://img.icons8.com/fluency/512/game-controller.png", 
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
